@@ -26,7 +26,7 @@ const App = () => {
 
             if(index !== -1){
                 commonChars.push(char);
-//                 The line name2Chars.splice(index, 1); is used to remove a character from the name2Chars array at a specific index, which corresponds to the common character found in both name1 and name2.
+//The line name2Chars.splice(index, 1); is used to remove a character from the name2Chars array at a specific index, which corresponds to the common character found in both name1 and name2.
 
 // Here's a breakdown of how this line works:
 
@@ -85,12 +85,14 @@ const App = () => {
                <input data-testid="input1"
                 placeholder="First Name"
                 value={firstName}
-                onChange={(e)=> setFirstName(e.target.value)}/>
+                onChange={(e)=> setFirstName(e.target.value)}
+                name="name1"/>
 
                <input data-testid="input2"
                placeholder="Second Name"
                value={secondName}
-               onChange={(e)=>setSecondName(e.target.value)}/>
+               onChange={(e)=>setSecondName(e.target.value)}
+               name="name2"/>
                
                <button data-testid="calculate_relationship" onClick={relationshiohandler}>
                 Calculate Relationship Future</button>
